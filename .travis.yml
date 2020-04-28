@@ -1,10 +1,11 @@
 language: node_js
 node_js:
   - 8
-script: eleventy && postcss-cli src/_assets/stylesheets/app.css -o src/_includes/app.compiled.css && eleventy
+script: eleventy
 deploy:
   provider: netlify
   site: $NETLIFY_SITE
   auth: $NETLIFY_AUTH
   edge: true
   dir: "dist/"
+  prod: true
