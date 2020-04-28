@@ -14,6 +14,6 @@
     "luxon": "^1.23.0",
     "postcss-cli": "^7.1.0",
     "postcss-import": "^12.0.1",
-    "tailwindcss": "^1.2.0",
+    "tailwindcss": "^1.2.0"
   }
 }
