@@ -3,7 +3,7 @@ node_js:
   - 8
 script:
   - eleventy
-  - postcss-cli src/_assets/stylesheets/app.css -o src/_includes/app.compiled.css
+  - postcss src/_assets/stylesheets/app.css -o src/_includes/app.compiled.css
   - eleventy
 deploy:
   provider: netlify
