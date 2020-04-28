@@ -1,21 +1,13 @@
 language: node_js
 node_js:
   - 8
-jobs:
-  include:
-    - stage: "Eleventy"
-      script: eleventy
-    - stage: "POSTCSS"
-      script: cd dist
-    - stage: "Eleventy2"
-      script: eleventy
-    - stage: deploy
-      script: skip
-      deploy:
-        provider: netlify
-        site: $NETLIFY_SITE
-        auth: $NETLIFY_AUTH
-        edge: true
-        dir: "dist/"
-        prod: true
-
+script:
+  - eleventy
+  - cd dist
+deploy:
+  provider: netlify
+  site: $NETLIFY_SITE
+  auth: $NETLIFY_AUTH
+  edge: true
+  dir: "dist/"
+  prod: true
