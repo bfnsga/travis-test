@@ -1,14 +1,18 @@
 language: node_js
 node_js:
   - 8
-script:
-  - eleventy
-  - postcss src/_assets/stylesheets/app.css -o src/_includes/app.compiled.css
-  - eleventy
-deploy:
-  provider: netlify
-  site: $NETLIFY_SITE
-  auth: $NETLIFY_AUTH
-  edge: true
-  dir: "dist/"
-  prod: true
+jobs:
+  include:
+    - script: eleventy
+    - script: postcss src/_assets/stylesheets/app.css -o src/_includes/app.compiled.css
+    - script: eleventy
+    - stage: deploy
+      script: skip
+      deploy:
+        provider: netlify
+        site: $NETLIFY_SITE
+        auth: $NETLIFY_AUTH
+        edge: true
+        dir: "dist/"
+        prod: true
+
