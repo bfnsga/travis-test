@@ -3,7 +3,7 @@ node_js:
   - 8
 script:
   - eleventy
-  - cd dist
+  - postcss src/_assets/stylesheets/app.css -o src/_includes/app.compiled.css
 deploy:
   provider: netlify
   site: $NETLIFY_SITE
