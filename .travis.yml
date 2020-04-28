@@ -4,7 +4,7 @@ node_js:
 script: del dist && eleventy && postcss src/_assets/stylesheets/app.css -o src/_includes/app.compiled.css && eleventy
 deploy:
   provider: netlify
-  site: <site>
-  auth: <encrypted auth>
-  edge: true # opt in to dpl v2
+  site: $NETLIFY_SITE
+  auth: $NETLIFY_AUTH
+  edge: true
   dir: "dist/"
