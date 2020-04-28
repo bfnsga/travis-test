@@ -3,8 +3,10 @@ node_js:
   - 8
 jobs:
   include:
-    - script: eleventy
-    - script: postcss src/_assets/stylesheets/app.css -o src/_includes/app.compiled.css
+    - stage: "Eleventy"
+      script: eleventy
+    - stage: "POSTCSS"
+      script: postcss src/_assets/stylesheets/app.css -o src/_includes/app.compiled.css
     - script: eleventy
     - stage: deploy
       script: skip
