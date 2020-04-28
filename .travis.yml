@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - 8
+before_script:
+  - npm install @11ty/eleventy -g
+script: eleventy --pathprefix="/eleventy-base-blog/"
+deploy:
+  provider: netlify
+  site: <site>
+  auth: <encrypted auth>
+  edge: true # opt in to dpl v2
+  dir: "dist/"
