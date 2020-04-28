@@ -6,7 +6,7 @@ jobs:
     - stage: "Eleventy"
       script: eleventy
     - stage: "POSTCSS"
-      script: postcss-cli src/_assets/stylesheets/app.css -o src/_includes/app.compiled.css
+      script: postcss src/_assets/stylesheets/app.css -o src/_includes/app.compiled.css
     - stage: "Eleventy2"
       script: eleventy
     - stage: deploy
