@@ -11,6 +11,5 @@ apparently it does
 
 ***
 
-{% cloudinaryImage421 "river_rock_picture_nzcx7h.jpg","Picture of a cat" %}
 
 `next test`
