@@ -12,6 +12,5 @@ module.exports = {
     cssnano({
             preset: 'default',
         })
-    require('autoprefixer')
   ]
 }
