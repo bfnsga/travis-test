@@ -3,8 +3,6 @@ node_js:
   - 8
 script:
   - eleventy
-  - cd dist
-  - echo dir
 deploy:
   provider: netlify
   site: $NETLIFY_SITE
