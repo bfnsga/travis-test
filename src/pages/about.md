@@ -1,6 +1,5 @@
 ---
 layout: base.njk
-permalink: /about
 eleventyNavigation:
   key: About
   order: 1
