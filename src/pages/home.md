@@ -1,5 +1,5 @@
 ---
-layout: base.nkj
+layout: base.njk
 permalink: /
 ---
 
