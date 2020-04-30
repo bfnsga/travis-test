@@ -1,6 +1,6 @@
 /* purgecss start ignore */
 @import "tailwindcss/base";
-@import "typeface-space-mono";
+@import "./space-mono.css";
 
 @import "tailwindcss/components";
 /* purgecss end ignore */
