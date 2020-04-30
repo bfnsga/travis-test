@@ -6,7 +6,7 @@ color: red
   <head>
     {% include "head.njk" %}
       <!-- capture the CSS content as a Liquid variable -->
-      {% set css %}{% include "app.compiled.css" %}{% endset %}
+      {% set css %}{% include "output.css" %}{% endset %}
       <style>
         {{ css | safe }}
       </style>
