@@ -14,7 +14,7 @@ eleventyNavigation:
       <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Knausgaard typewriter readymade marfa</h1>
       <p class="mb-8 leading-relaxed">Chillwave portland ugh, knausgaard fam polaroid iPhone. Man braid swag typewriter affogato, hella selvage wolf narwhal dreamcatcher.</p>
       <div class="flex w-full md:justify-start justify-center">
-        <input class="bg-gray-100 rounded border -mr-2 border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 lg:w-full xl:w-1/2 w-2/4" placeholder="Email Address" type="text">
+        <input class="bg-gray-100 rounded border -mr-2 border-gray-400 focus:outline-none text-base px-4 lg:w-full xl:w-1/2 w-2/4" placeholder="Email Address" type="text">
         <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Sign Up</button>
       </div>
     </div>
