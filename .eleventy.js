@@ -1,6 +1,4 @@
-const {
-    DateTime
-} = require("luxon");
+const { DateTime } = require("luxon");
 const htmlmin = require("html-minifier");
 
 module.exports = function(eleventyConfig) {
@@ -19,6 +17,22 @@ module.exports = function(eleventyConfig) {
 
     return content;
   });
+    
+/* Markdown Plugins */
+  let markdownIt = require("markdown-it");
+  let markdownItAnchor = require("markdown-it-anchor");
+  let options = {
+    html: true,
+    breaks: true,
+    linkify: true
+  };
+  let opts = {
+    permalink: false
+  };
+
+  eleventyConfig.setLibrary("md", markdownIt(options)
+    .use(markdownItAnchor, opts)
+  );
 
 // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
     eleventyConfig.addFilter('htmlDateString', (dateObj) => {
@@ -34,9 +48,10 @@ return {
             includes: "_includes",
             layouts: "_layouts"
         },
-        templateFormats: ["html", "md", "njk"],
+        templateFormats: ["html", "md", "njk","liquid"],
+        markdownTemplateEngine: "liquid",
         htmlTemplateEngine: "njk",
-
+        dataTemplateEngine: "njk",
         // 1.1 Enable eleventy to pass dirs specified above
         passthroughFileCopy: true
     };
