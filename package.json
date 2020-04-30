@@ -8,6 +8,8 @@
       "luxon": "^1.23.0",
       "postcss-cli": "^7.1.1",
       "postcss-import": "^12.0.1",
-      "tailwindcss": "^1.2.0"
+      "tailwindcss": "^1.2.0",
+      "markdown-it": "^10.0.0",
+      "markdown-it-anchor": "^5.2.7"
   }
 }
