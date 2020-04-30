@@ -1,5 +1,6 @@
 const { DateTime } = require("luxon");
 const htmlmin = require("html-minifier");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function(eleventyConfig) {
     // Folders to copy to build dir (See. 1.1)
@@ -40,6 +41,12 @@ module.exports = function(eleventyConfig) {
             zone: 'utc'
         }).toFormat('yyyy-LL-dd');
     });
+    
+// Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
+  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+    
+// https://www.11ty.dev/docs/data-deep-merge/
+  eleventyConfig.setDataDeepMerge(true);
 
 return {
         dir: {
