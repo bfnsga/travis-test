@@ -6,7 +6,6 @@ const htmlmin = require("html-minifier");
 module.exports = function(eleventyConfig) {
     // Folders to copy to build dir (See. 1.1)
     eleventyConfig.addPassthroughCopy("src/static");
-    eleventyConfig.addPassthroughCopy("src/files");
 
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
     if( outputPath.endsWith(".html") ) {
