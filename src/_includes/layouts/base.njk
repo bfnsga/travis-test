@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {% include "components/head.njk" %}
     {% if env == 'production' %}
       <!-- capture the CSS content as a Liquid variable -->
       {% set css %}{% include "output.css" %}{% endset %}
