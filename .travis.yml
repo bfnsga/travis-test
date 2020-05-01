@@ -4,7 +4,7 @@ node_js:
 script:
   - eleventy
   - NODE_ENV=production postcss src/stylesheets/input.css -o src/_includes/output.css
-  - eleventy
+  - ELEVENTY_ENV=production eleventy
 deploy:
   provider: netlify
   site: $NETLIFY_SITE
