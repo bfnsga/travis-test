@@ -7,4 +7,3 @@
 * Need to add markdown-it as a plugin
   * Ensure all new post pages are in markdown format
 * Add in deep data merge
-* Add in node=production and proper packages for local development
