@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "concurrently \"postcss src/stylesheets/input.css -o src/static/output.css --watch --verbose\" \"eleventy --serve --watch\""
+    "start": "npx concurrently \"npx postcss src/stylesheets/input.css -o src/static/output.css --watch --verbose\" \"npx eleventy --serve --watch\""
   },
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",
