@@ -4,12 +4,15 @@ color: red
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% include "head.njk" %}
+    {% if env == 'production' %}
       <!-- capture the CSS content as a Liquid variable -->
       {% set css %}{% include "output.css" %}{% endset %}
-      <style>
+      <style> 
         {{ css | safe }}
       </style>
+    {% else %}
+    <link rel="stylesheet" href="/static/output.css">
+    {% endif %}
   </head>
   <body>
     {% include "nav.njk" %}
