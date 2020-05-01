@@ -1,5 +1,4 @@
 ---
-layout: base.njk
 permalink: /
 eleventyNavigation:
   key: Home
