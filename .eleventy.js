@@ -52,8 +52,7 @@ return {
         dir: {
             input: "src/",
             output: "dist",
-            includes: "_includes",
-            layouts: "_layouts"
+            includes: "_includes"
         },
         templateFormats: ["html", "md", "njk","liquid"],
         markdownTemplateEngine: "liquid",
