@@ -2,7 +2,6 @@ language: node_js
 node_js:
  - "node"
 script:
-  - postcss src/stylesheets/input.css -o src/static/output.css
   - eleventy
   - NODE_ENV=production postcss src/stylesheets/input.css -o src/_includes/output.css
   - ELEVENTY_ENV=production eleventy
