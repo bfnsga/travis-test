@@ -5,12 +5,12 @@ module.exports = {
   plugins: [
     require('postcss-import'),
     require('tailwindcss'),
-    require('autoprefixer'),
-    purgecss({
+    process.env.NODE_ENV === 'production' ? require('autoprefixer'),
+    process.env.NODE_ENV === 'production' ? purgecss({
       content: ['dist/**/*.html'],
       defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
     }),
-    cssnano({
+    process.env.NODE_ENV === 'production' ? cssnano({
             preset: 'default',
         })
   ]
