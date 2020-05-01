@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "concurrently \"postcss src/stylesheets/input.css -o src/static/output.css --watch --verbose\" \"eleventy --serve --watch\""
+  },
   "devDependencies": {
       "@11ty/eleventy": "^0.10.0",
       "@fullhuman/postcss-purgecss": "^2.1.2",
