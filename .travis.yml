@@ -3,7 +3,7 @@ node_js:
  - "node"
 script:
   - eleventy
-  - postcss src/stylesheets/input.css -o src/_includes/output.css
+  - NODE_ENV=production postcss src/stylesheets/input.css -o src/_includes/output.css
   - eleventy
 deploy:
   provider: netlify
