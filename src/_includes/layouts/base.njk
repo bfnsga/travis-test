@@ -14,7 +14,11 @@
   </head>
   <body>
     {% include "components/nav.njk" %}
+    <main>
+    <article>
     {{ content | safe }}
+    </article>
+    </main>
     {% include "components/footer.njk" %}
   </body>
 </html>
