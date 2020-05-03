@@ -6,7 +6,7 @@
     <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
       {% set navPages = collections.all | eleventyNavigation %}
       {%- for entry in navPages %}
-        <a class="mr-8 hover:text-gray-900" href="{{ entry.url | url }}"{% if entry.url == page.url %} data-current="current item"{% endif %}>{{ entry.title }}</a>
+        <a class="hover:text-gray-900" href="{{ entry.url | url }}"{% if entry.url == page.url %} data-current="current item"{% endif %}>{{ entry.title }}</a>
       {%- endfor %}
   </nav>
   </div>
