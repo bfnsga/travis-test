@@ -1,4 +1,4 @@
 ---
-permalink: /posts/firstpost/index.html
+title: hello-world
 ---
 # Extra test
