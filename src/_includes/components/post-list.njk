@@ -1,21 +1,14 @@
-{% if postListItems.length %}
-  <section>
-    <div>
-      <h2>{{ postListHeading }}</h2>
-      <ol reversed>
-        {% for item in postListItems %}
-          {% if item.date.getTime() <= global.now %}
-            <li>
-              <h3>
-                <a href="{{ item.url }}" rel="bookmark">{{ item.data.title }}</a>
-              </h3>
-              <p>
-                <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | dateFilter }}</time>
-              </p>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ol>
-    </div>
-  </section>
-{% endif %}
+<ol reversed class="postlist" style="counter-reset: start-from {{ (postslistCounter or postslist.length) + 1 }}">
+{% for post in postslist | reverse %}
+  <li class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+    <a href="{{ post.url | url }}" class="postlist-link">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+    <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+    {% for tag in post.data.tags %}
+      {%- if collections.tagList.indexOf(tag) != -1 -%}
+      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+      <a href="{{ tagUrl | url }}" class="tag">{{ tag }}</a>
+      {%- endif -%}
+    {% endfor %}
+  </li>
+{% endfor %}
+</ol>
