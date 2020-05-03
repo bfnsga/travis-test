@@ -1,4 +1,4 @@
 ---
-title: hello-world
+link: hello-world
 ---
 # Extra test
