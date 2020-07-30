@@ -5,6 +5,7 @@ module.exports = {
   plugins: [
     require('postcss-import'),
     require('tailwindcss'),
+    require('@tailwindcss/ui'),
     process.env.NODE_ENV === 'production' ? require('autoprefixer') : null,
     process.env.NODE_ENV === 'production' ? purgecss({
       content: ['dist/**/*.html'],
